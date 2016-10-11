@@ -5,7 +5,7 @@ from platform import system as platform  # import platform system as platform
 from Tkinter import *  # barely need this
 
 
-class Shapes:
+class Shapes(object):
 
     def __init__(self):
         pass

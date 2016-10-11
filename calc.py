@@ -5,7 +5,7 @@ from platform import system as platform  # import platform system as platform
 from time import clock  # import one func
 
 
-class Calc:  # doesn't inherit anything
+class Calc(object):  # doesn't inherit anything
 
     """
     My very first Python class.
@@ -35,7 +35,7 @@ class Calc:  # doesn't inherit anything
         self.new_window.bind("<Escape>", self.destroy_new)
         self.new_window.wm_title("help")
         helper.pack()
-        self.z = "You've entered the help menu;"
+        self.z = "You've entered the help menu"
 
     def destroy(self, value):  # destroy method
         self.root.destroy()  # destroys the window
@@ -48,7 +48,7 @@ class Calc:  # doesn't inherit anything
             self.submit(value)  # submit call
         except:  # otherwise
             self.result.delete("1.0", END)
-            self.result.insert(INSERT, "Internal Error;")  # do this
+            self.result.insert(INSERT, "Internal Error")  # do this
 
     def window_front(self):
         if platform() == "Darwin":  # how Mac OS X is identified by Python
@@ -72,7 +72,7 @@ class Calc:  # doesn't inherit anything
                 if y and x:  # if x and y exist
                     self.z = str(x + y)  # z is the answer
                 else:  # otherwise
-                    self.z = "Error;"  # error
+                    self.z = "Error"  # error
             elif equation[i:(i + 2)] == "//":
                 if equation[0] == "~":
                     x = -(float(equation[1:i]))
@@ -85,7 +85,7 @@ class Calc:  # doesn't inherit anything
                 if y != 1:
                     self.z = str(x ** float(1 / y))
                 else:
-                    self.z = "Error;"
+                    self.z = "Error"
             elif equation[i:(i + 2)] == "**":
                 if equation[0] == "~":
                     x = -(float(equation[1:i]))
@@ -98,7 +98,7 @@ class Calc:  # doesn't inherit anything
                 if y and x:
                     self.z = str(x ** y)
                 else:
-                    self.z = "Error;"
+                    self.z = "Error"
             elif equation[i] == "*":
                 if equation[0] == "~":
                     x = -(float(equation[1:i]))
@@ -111,7 +111,7 @@ class Calc:  # doesn't inherit anything
                 if y and x:
                     self.z = str(x * y)
                 else:
-                    self.z = "Error;"
+                    self.z = "Error"
             elif equation[i] == "-":
                 if equation[0] == "~":
                     x = -(float(equation[1:i]))
@@ -124,7 +124,7 @@ class Calc:  # doesn't inherit anything
                 if y and x:
                     self.z = str(x - y)
                 else:
-                    self.z = "Error;"
+                    self.z = "Error"
             elif equation[i] == "/":
                 if equation[0] == "~":
                     x = -(float(equation[1:i]))
@@ -137,11 +137,11 @@ class Calc:  # doesn't inherit anything
                 if y and x:
                     self.z = str(x / y)
                 else:
-                    self.z = "Error;"
+                    self.z = "Error"
             elif equation == "h":
                 self.helpness()
             else:
-                self.z = "Error;"
+                self.z = "Error"
                 i += 1
         self.result.delete("1.0", END)
         self.result.insert(INSERT, self.z)

@@ -1,5 +1,4 @@
-class FunWithLists:
-
+class FunWithLists(object):
     """
     This is my list of stuff I can do with lists.
     """
@@ -103,6 +102,14 @@ class FunWithLists:
         for number in range(0, self.depth(self.tl)):
             self.flatten_2d()
 
+    def pop_from_list(self):
+        """
+        Deletes and returns the last element of a list.
+        """
+        popper = self.tl[self.length_of_list() - 1]
+        del self.tl[self.length_of_list() - 1]
+        return popper
+
 # below is an example N-dimensional list
 
 my_list = [
@@ -150,6 +157,8 @@ print("The amount of times \"Again\" appears in my_list: ")
 print(funcs.count_in_list("Again"))
 print("The index of \"Again\" in my_list is: ")
 print(funcs.index_in_list("Again"))
-print("Now my_list will disappear: ")
+print("Popping the last element off of my_list: ")
+print(funcs.pop_from_list())
+print("Now my_list will be cleared: ")
 funcs.clear_list()
 print(my_list)
