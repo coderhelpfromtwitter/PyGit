@@ -139,7 +139,7 @@ my_list = [
     ],
     11
 ]
-funcs = FunWithLists(my_list)
+funcs = FunWithLists(my_list)  # TODO: Make this even more DRY
 print("The old my_list: ")
 print(my_list)
 print("Flattened my_list: ")

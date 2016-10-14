@@ -126,6 +126,7 @@ def x_is_finite(x):
     else:
         return False
 
+# TODO: Make more methods
 
 print("X is greater than 0: ")
 print(x_is_greater_than_zero(-1.6))

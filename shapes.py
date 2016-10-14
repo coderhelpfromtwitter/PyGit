@@ -1,4 +1,3 @@
-from __future__ import division  # required for create_new
 from turtle import *  # it's ya boi
 from os import system  # import only one function
 from platform import system as platform  # import platform system as platform
@@ -106,8 +105,8 @@ class Shapes(object):
         print(str(xyz) + "agon")
         t.speed(0)
         for number in range(0, xyz):
-            t.forward(float(360 / xyz))
-            t.left(float(360 / xyz))
+            t.forward(float(360.0 / float(xyz)))
+            t.left(float(360.0 / float(xyz)))
 
     def smiley(self):
         t.penup()

@@ -233,5 +233,5 @@ class Main(object):
         root.mainloop()
 
 
-my_compiler = Main()
+my_compiler = Main()  # TODO: Make more features
 my_compiler.start()

@@ -46,7 +46,7 @@ class Calc(object):  # doesn't inherit anything
     def try_submit(self, value):  # tries to submit
         try:  # try this
             self.submit(value)  # submit call
-        except:  # otherwise
+        except BaseException:  # otherwise
             self.result.delete("1.0", END)
             self.result.insert(INSERT, "Internal Error")  # do this
 
